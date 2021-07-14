@@ -7,4 +7,12 @@ var app = new Vue({
       products: "products!!"
     };
   },
+  methods: {
+    loadProducts: function () {
+      axios.get("http://localhost:3000/products").then((response) => {
+        console.log(response.data);
+        this.products = response.data;
+      });
+    }
+  }
 });
