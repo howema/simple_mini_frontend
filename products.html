@@ -14,7 +14,9 @@
 
       <div>
         <button v-on:click="loadProducts()">Load products!</button>
-        <p>{{ products }}</p>
+        <div v-for="product in products">
+          <p>{{ product }}</p>
+        </div>
       </div>
     </div>
   </body>
